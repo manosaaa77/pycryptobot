@@ -30,7 +30,8 @@ from models.helper.TextBoxHelper import TextBox
 # minimal traceback
 sys.tracebacklimit = 1
 
-app = PyCryptoBot()
+#app = PyCryptoBot()
+app = PyCryptoBot(exchange='binance')
 account = TradingAccount(app)
 Stats(app, account).show()
 technical_analysis = None

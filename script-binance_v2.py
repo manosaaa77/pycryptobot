@@ -16,7 +16,7 @@ resp = api.authAPI('GET', '/api/v3/account')
 print(resp)
 
 api = BAuthAPI(app.getAPIKey(), app.getAPISecret(), app.getAPIURL())
-resp = api.authAPI('GET', '/api/v3/klines' , { 'symbol': 'BTCGBP', 'interval': '1h', 'limit': 300 })
+resp = api.authAPI('GET', '/api/v3/klines' , { 'symbol': 'BTCAUD', 'interval': '1h', 'limit': 300 })
 print(resp)
 """
 
@@ -151,14 +151,14 @@ print(df)
 """
 app = PyCryptoBot(exchange='binance')
 api = BAuthAPI(app.getAPIKey(), app.getAPISecret(), app.getAPIURL())
-df = api.getMarketInfoFilters('BTCGBP')
+df = api.getMarketInfoFilters('BTCAUD')
 print(df)
 """
 
 """
 app = PyCryptoBot(exchange='binance')
 api = BAuthAPI(app.getAPIKey(), app.getAPISecret(), app.getAPIURL())
-fee = api.getTradeFee('BTCGBP')
+fee = api.getTradeFee('BTCAUD')
 print (fee)
 """
 
