@@ -174,7 +174,8 @@ class TradingAccount:
                             return 0.0
                         else:
                             # return balance of specified currency (if positive)
-                            if currency in ["EUR", "GBP", "USD"]:
+                            ##if currency in ["EUR", "GBP", "USD"]:
+                            if currency in ["AUD", "GBP", "USD"]:    # MS - included AUD currency - 20210918
                                 return float(
                                     truncate(
                                         float(
