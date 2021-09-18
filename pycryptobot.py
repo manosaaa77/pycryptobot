@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-"""Python Crypto Bot consuming Coinbase Pro or Binance APIs"""
+#"""Python Crypto Bot consuming Coinbase Pro or Binance APIs"""
+"""Python Crypto Bot consuming Binance APIs"""
 
 import functools
 import os
