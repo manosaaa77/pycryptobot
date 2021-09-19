@@ -142,12 +142,14 @@ class TradingAccount:
 
     def getBalance(self, currency=""):
         """Retrieves balance either live or simulation
-
+        
         Parameters
         ----------
         currency: str, optional
             Filters orders by currency
         """
+
+        print("getting balance for currency: " + currency) # MS - Debug message
 
         if self.app.getExchange() == "binance":
             if self.mode == "live":
