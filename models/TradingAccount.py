@@ -149,9 +149,10 @@ class TradingAccount:
             Filters orders by currency
         """
 
-        print("getting balance for currency: " + currency) # MS - Debug message
+        #print("getting balance for currency: " + currency) # MS - Debug message
 
         if self.app.getExchange() == "binance":
+            # print("mode is: " + self.mode)                  #MS - Debug Message
             if self.mode == "live":
                 model = BAuthAPI(
                     self.app.getAPIKey(),
@@ -160,7 +161,10 @@ class TradingAccount:
                     recv_window=self.app.getRecvWindow(),
                 )
                 df = model.getAccount()
+                # print("Äccount details: ")                  #MS - Debug Message
+                # print(df)                                   #MS - Debug Message
                 if isinstance(df, pd.DataFrame):
+                    # print("Currency is: " + currency)       #MS - Debug Message
                     if currency == "":
                         # retrieve all balances
                         return df
@@ -168,7 +172,6 @@ class TradingAccount:
                         # return nil if dataframe is empty
                         if len(df) == 0:
                             return 0.0
-
                         # retrieve balance of specified currency
                         df_filtered = df[df["currency"] == currency]["available"]
                         if len(df_filtered) == 0:

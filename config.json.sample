@@ -48,7 +48,7 @@
             "disablefailsafefibonaccilow" : 1,
             "disableprofitbankreversal" : 0,
             "disabletracker" : 1,
-            "disabletelegram" : 1,
+            "disabletelegram" : 0,
             "autorestart" : 0,
             "graphs" : 0,
             "verbose" : 0,

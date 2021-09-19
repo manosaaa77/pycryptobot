@@ -4,6 +4,8 @@
 #"""Python Crypto Bot consuming Coinbase Pro or Binance APIs"""
 """Python Crypto Bot consuming Binance APIs"""
 
+debug=1                                         #MS Added Debug Mode
+
 import functools
 import os
 import sched
