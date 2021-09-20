@@ -72,7 +72,8 @@ class AppState:
                 if base < base_min:
                     sys.tracebacklimit = 0
                     raise Exception(
-                        f"Insufficient Base Funds! (Actual: {base}, Minimum: {base_min})"
+                        # f"Insufficient Base Funds! (Actual: {base}, Minimum: {base_min})"
+                        f"Ex01 - Insufficient Base Funds! (Actual: {base}, Minimum: {base_min})"
                     )
 
         elif self.app.getExchange() == "coinbasepro":
@@ -87,7 +88,7 @@ class AppState:
             if base < base_min:
                 sys.tracebacklimit = 0
                 raise Exception(
-                    f"Insufficient Base Funds! (Actual: {base}, Minimum: {base_min})"
+                    f"Ex02 - Insufficient Base Funds! (Actual: {base}, Minimum: {base_min})"
                 )
 
     def minimumOrderQuote(self):
@@ -108,7 +109,7 @@ class AppState:
                 if quote < quote_min:
                     sys.tracebacklimit = 0
                     raise Exception(
-                        f"Insufficient Quote Funds! (Actual: {quote}, Minimum: {quote_min})"
+                        f"Ex03 - Insufficient Quote Funds! (Actual: {quote}, Minimum: {quote_min})"
                     )
 
         elif self.app.getExchange() == "coinbasepro":
@@ -126,7 +127,7 @@ class AppState:
             if (quote / price) < base_min:
                 sys.tracebacklimit = 0
                 raise Exception(
-                    f'Insufficient Quote Funds! (Actual: {"{:.8f}".format((quote / price))}, Minimum: {base_min})'
+                    f'Ex04 - Insufficient Quote Funds! (Actual: {"{:.8f}".format((quote / price))}, Minimum: {base_min})'
                 )
 
     def getLastOrder(self):
@@ -172,7 +173,7 @@ class AppState:
             if base == 0.0 and quote == 0.0:
                 sys.tracebacklimit = 0
                 raise Exception(
-                    f"Insufficient Funds! ({self.app.getBaseCurrency()}={str(base)}, {self.app.getQuoteCurrency()}={str(base)})"
+                    f"Ex05 - Insufficient Funds! ({self.app.getBaseCurrency()}={str(base)}, {self.app.getQuoteCurrency()}={str(base)})"
                 )
 
             # determine last action by comparing normalised [0,1] base and quote balances

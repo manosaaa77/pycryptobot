@@ -16,8 +16,8 @@ def to_internal_granularity(granularity: str) -> int:
     return {'1m': 60, '5m': 300, '15m': 900, '1h': 3600, '6h': 21600, '1d': 86400}[granularity]
 
 def parseMarket(market):
-    base_currency = 'BTC'
-    quote_currency = 'GBP'
+    base_currency = 'BTC'    #MS - needs to be dynamic
+    quote_currency = 'AUD'
 
     if not isMarketValid(market):
         raise ValueError('Binance market invalid: ' + market)
